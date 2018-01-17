@@ -644,14 +644,19 @@ public abstract class DateRangeRules {
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.MONTH), Calendar.JANUARY);
         // Ignore checkstyle failure for Fall through from previous branch of the switch statement.
         // CHECKSTYLE: IGNORE 10
+        // fall through need to zero out all lower timeunits
       case MONTH:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.DAY), 1);
+        // fall through need to zero out all lower timeunits
       case DAY:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.HOUR), 0);
+        // fall through need to zero out all lower timeunits
       case HOUR:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.MINUTE), 0);
+        // fall through need to zero out all lower timeunits
       case MINUTE:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.SECOND), 0);
+        // fall through need to zero out all lower timeunits
       case SECOND:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.MILLISECOND), 0);
       }
