@@ -642,8 +642,6 @@ public abstract class DateRangeRules {
       switch (timeUnit) {
       case YEAR:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.MONTH), Calendar.JANUARY);
-        // Ignore checkstyle failure for Fall through from previous branch of the switch statement.
-        // CHECKSTYLE: IGNORE 10
         // fall through need to zero out all lower timeunits
       case MONTH:
         c.set(TIME_UNIT_CODES.get(TimeUnitRange.DAY), 1);
